@@ -2,8 +2,8 @@
   text-align: center;
 }
 .Header {
-  color: #273453;
-  text-shadow: 1px 1px 5px #fff;
+  color: #fff;
+  /* text-shadow: 1px 1px 5px #fff; */
 }
 /* write your parent styles in here for your App.js */
 h2 {
@@ -11,7 +11,7 @@ h2 {
 }
 
 h3 {
-  color:rgba(255, 255, 255, 0.849);
+  color:rgba(255, 255, 255, 0.774);
 }
 
 body {
