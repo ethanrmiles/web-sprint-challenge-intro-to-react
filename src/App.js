@@ -21,7 +21,8 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">Star-Wars Characters:</h1>
+      <h3>Click the 'Show More' button to learn about your favorite characters</h3>
       <Character characters={data} />
     </div>
   );
