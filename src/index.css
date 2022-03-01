@@ -4,5 +4,5 @@ body {
   font-family: sans-serif;
   background-image: url('./images/blurry-gradient-haikei.svg');
   background-size: cover;
-  background-repeat: none;
+  background-repeat: no-repeat;
 }

@@ -3,6 +3,7 @@ import { render, screen } from "@testing-library/react";
 import App from "./App";
 import { server } from "./mocks/server";
 import "mutationobserver-shim";
+import Character from "./components/Character";
 
 beforeAll(() => server.listen());
 afterAll(() => server.close());
@@ -13,7 +14,7 @@ afterEach(() => {
 
 describe("<App />", () => {
   test("[2] Luke Skywalker eventually appears in the DOM", async () => {
-    render(<App />);
+    render(<Character />);
     expect(screen.queryByText(/Luke/i)).not.toBeInTheDocument();
     expect(await screen.findByText(/Luke/i)).toBeInTheDocument();
   });

@@ -6,6 +6,7 @@ import theme from '../theme';
 export default function Character (props) {
     const { characters } = props;
     const [showDetails, setShowDetails] = useState(null);
+    console.log(characters)
     
     //Styled Components Here: 
     const StyledDetails = styled.div`
@@ -45,31 +46,21 @@ export default function Character (props) {
     }
    
     
-    return (
-            <div className='character-wrapper'>
-                <div className='character-list'>
-                    {
-                        characters.map(character => {
-                            return <StyledCard className='character-card'>
-                                <h2>{character.name}</h2>
-                                <StyledButton onClick={toggleDetails}>{showDetails?'Hide Details':'Show More'}</StyledButton>
-                                <StyledDetails className='details-container'>
-                                {
-                                showDetails &&
-                                    <StyledUl id='details'>
-                                        <StyledLi>Birth Year: {character.birth_year}</StyledLi>
-                                        <StyledLi>Eye Color: {character.eye_color}</StyledLi>
-                                        <StyledLi>Gender: {character.gender}</StyledLi>
-                                        <StyledLi>Hair Color: {character.hair_color}</StyledLi>
-                                        <StyledLi>Height: {character.height}</StyledLi>
-                                        <StyledLi>Mass: {character.mass}</StyledLi>
-                                    </StyledUl>
-                                 }
-                                </StyledDetails>
-                                </StyledCard>
-                        })
-                    }
-                </div>
-            </div>
-    )
+    return  <StyledCard className='character-card'>
+    <h2>{characters.name}</h2>
+    <StyledButton onClick={toggleDetails}>{showDetails?'Hide Details':'Show More'}</StyledButton>
+    <StyledDetails className='details-container'>
+    {
+    showDetails &&
+        <StyledUl id='details'>
+            <StyledLi>Birth Year: {characters.birth_year}</StyledLi>
+            <StyledLi>Eye Color: {characters.eye_color}</StyledLi>
+            <StyledLi>Gender: {characters.gender}</StyledLi>
+            <StyledLi>Hair Color: {characters.hair_color}</StyledLi>
+            <StyledLi>Height: {characters.height}</StyledLi>
+            <StyledLi>Mass: {characters.mass}</StyledLi>
+        </StyledUl>
+     }
+    </StyledDetails>
+    </StyledCard>
 }
